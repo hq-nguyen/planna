@@ -19,13 +19,13 @@ export const ThemeChanger = () => {
     }
   return <Tabs defaultValue={theme}>
     <TabsList className='border dark:border-neutral-800 dark:bg-[#030303]'>
-        <TabsTrigger value='light' onClick={(e) => setTheme("light")}>
+        <TabsTrigger value='light' onClick={() => setTheme("light")}>
             <MdOutlineWbSunny className='h-[1.2rem] w-[1.2rem]' />
         </TabsTrigger>
-        <TabsTrigger value='dark' onClick={(e) => setTheme("dark")}>
+        <TabsTrigger value='dark' onClick={() => setTheme("dark")}>
             <IoMdMoon className='h-[1.2rem] w-[1.2rem] rotate-180 transition-all dark:rotate-0'/>
         </TabsTrigger>
-        <TabsTrigger value='system' onClick={(e) => setTheme("system")}>
+        <TabsTrigger value='system' onClick={() => setTheme("system")}>
             <FaDesktop/> 
         </TabsTrigger>
     </TabsList>

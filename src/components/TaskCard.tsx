@@ -2,7 +2,7 @@ import { Task } from '@/generated/prisma'
 import React, { useTransition } from 'react'
 import { Checkbox } from './ui/checkbox'
 import { cn } from '@/lib/utils'
-import { format, set } from 'date-fns';
+import { format } from 'date-fns';
 import { setTaskCompleted } from '@/actions/task';
 import { useRouter } from 'next/navigation';
 
