@@ -29,14 +29,17 @@ function TaskCard({ task }: { task: Task }) {
 
     return (
         <div className='flex items-start gap-2'>
-            <Checkbox 
-            disabled={task.completed || isLoading}
-            onCheckedChange={() => {
-                startTransition(async () => {
-                    await setTaskCompleted(task.id);
-                    router.refresh();
-                })
-            }} id={task.id.toString()} className='w-5 h-5' checked={task.completed} />
+            <Checkbox
+                disabled={task.completed || isLoading}
+                onCheckedChange={() => {
+                    startTransition(async () => {
+                        await setTaskCompleted(task.id);
+                        router.refresh();
+                    })
+                }}
+                id={task.id.toString()}
+                className='w-5 h-5'
+                checked={task.completed} />
             <label htmlFor={task.id.toString()} className={cn("text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 decoration-1 dark:decoration-white", task.completed && "line-through")}>
                 {task.content}
                 {task.expiresAt && (
